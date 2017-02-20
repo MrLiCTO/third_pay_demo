@@ -1,5 +1,6 @@
 package com.lisl.app.beanPost;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
