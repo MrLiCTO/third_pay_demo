@@ -40,7 +40,7 @@ public class WechatPayController{
 
 		String body = "sdvsADv";
 		String out_trade_no = "243243423";
-		String order_price = "0.01";
+		String order_price = "1";
 		String spbill_create_ip = request.getRemoteAddr();
 
 		SortedMap<String, String> packageParams = new TreeMap<String, String>();
