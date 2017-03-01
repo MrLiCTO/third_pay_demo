@@ -1,0 +1,86 @@
+/*充值*/
+.rechargeContent>div{ 
+	height: 70px;
+}
+.rechargeContent  .itemName{
+	width: 90px; 
+	color: #333; 
+	height: 70px; 
+	line-height: 70px; 
+	float: left; 
+	font-weight: normal;
+}
+.rechargeContent .rechargeBalance .itemName{ 
+	line-height: 58px;
+}
+/*账户余额*/
+.rechargeBalance .currerNumber{ 
+	padding-top: 16px; 
+	color: #404040;
+}
+.currerNumber .num{ 
+	font-size: 16px; 
+	font-weight: bold; 
+	margin-top: 16px; 
+	line-height: 22px; 
+	margin-right: 2px;
+}
+.rechargeBalance .info{ 
+	font-size: 12px;
+	font-family: "黑体"; 
+	line-height: 32px; 
+	color: #999;}
+.rechargeAmount .rechargeNum{ 
+	width: 130px; 
+	height: 32px; 
+	line-height: 32px;
+	color:#333; 
+    border-color: #a7b5bc #ced9df #ced9df #a7b5bc;
+    border-style: solid;
+    border-width: 1px;
+	padding-left: 10px; 
+	margin-top: 20px;
+}
+/*错误提示*/
+.rechargeAmount .errorInfo{ 
+	font-size: 12px;
+	font-family: "黑体"; 
+	line-height: 20px; 
+	color: #ff931e; 
+	background: url(../images/rechargesprite.png) no-repeat 0 -30px; 
+	padding-left: 30px; 
+	margin-top: 30px; 
+	display: none;
+}
+.rechargeAmount .yuan{
+	color:#333; 
+	line-height: 20px; 
+	margin: 30px 20px 0 10px;
+}
+/*支付类型*/
+.rechargeType a{ 
+	width: 140px; 
+	height: 34px; 
+	border:1px solid #d9d9d9; 
+	border-radius: 1px; 
+	float: left; 
+	margin-right: 22px; 
+	margin-top: 16px; 
+	text-align: center; 
+	padding-top: 4px; 
+	position: relative;
+}
+.rechargeType a i{ 
+	position: absolute; 
+	right: 0; 
+	top: 0; 
+	width:26px; 
+	height: 26px; 
+	background: url(../images/rechargesprite.png) no-repeat; 
+	display: none;
+}
+.rechargeBtn{ 
+	margin-left: 90px; 
+	margin-top: 40px;
+}
+

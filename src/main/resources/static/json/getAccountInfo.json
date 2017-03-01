@@ -1,0 +1,14 @@
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "primaryAmount": 56328, 
+    "deputeAmount": 2365,  
+    "primaryLastMonthBalance": 58888, 
+    "deputeLastMonthBalance": 3000,
+    "primaryMonthPrepaid": 25000, 
+    "deputeMonthPrepaid": 250, 
+    "primaryDeduction": 200, 
+    "deputeDeduction": 200 
+  }
+}

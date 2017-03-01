@@ -1,0 +1,37 @@
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "pageData": [
+      {
+          "createTime": "创建时间",
+          "projectId": "优惠项目ID",
+          "state": "0",
+          "amount": "金额",
+          "wayId": "活动方式"
+      },
+      {
+          "createTime": "创建时间",
+          "projectId": "优惠项目ID",
+          "state": "1",
+          "amount": "金额",
+          "wayId": "活动方式"
+      },
+      {
+          "createTime": "创建时间",
+          "projectId": "优惠项目ID",
+          "state": "2",
+          "amount": "金额",
+          "wayId": "活动方式"
+      },
+      {
+          "createTime": "创建时间",
+          "projectId": "优惠项目ID",
+          "state": "1",
+          "amount": "金额",
+          "wayId": "活动方式"
+      }
+    ],
+    "totalCount": "10"
+  }
+}

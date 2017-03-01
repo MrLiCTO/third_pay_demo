@@ -1,0 +1,54 @@
+﻿{
+	"code":"200",
+	"msg":"写入成功",
+	"data":{
+		"1":{
+			"total":"11",
+			"items":[
+				{
+					"calling":"123456789",
+					"called":"987654321",
+					"startTime":"2017-01-01 00:00",
+					"duration":"05:00",
+					"state":"1",
+					"amount":"1000"
+	        	}
+			]
+		},
+		"2":{
+			"total":"12",
+			"items":[
+				{
+					"called":"987",
+					"startTime":"2017-01-02 00:00",
+					"duration":"05:00",
+					"state":"2",
+					"amount":"100"
+	        	}
+			]
+		},
+		"3":{
+			"total":"13",
+			"items":[
+				{
+					"receiveNumber":"456789",
+					"messageCont":"654321",
+					"startTime":"2017-01-03 00:00",
+					"state":"3",
+					"amount":"10"
+	        	}
+			]
+		},
+		"4":{
+			"total":"14",
+			"items":[
+				{
+					"receiveNumber":"321",
+					"startTime":"2017-01-04 00:00",
+					"state":"4",
+					"amount":"1"
+	        	}
+			]
+		}
+	}
+}

@@ -1,0 +1,66 @@
+/*资费配置*/
+[v-cloak] {
+  display: none;
+}
+.chargesTitle{ 
+	width: 100%;
+	border-bottom: 2px solid #fff;  
+	text-align: left; 
+	margin-top: 26px;
+	background: #ff931e; 
+}
+.chargesTitle th{ 
+	text-align: center;
+	color: #fff; 
+	height: 34px;
+	line-height: 34px; 
+}
+.chargesTitle th.chargesType{
+	width: 60%;
+}
+.chargesTitle th.payType,.chargesTitle th.payPrice{
+	width: 20%;
+}
+.chargesList{
+	font-size: 12px;
+	overflow: hidden;
+}
+.chargesList table{
+	width: 80%;
+}
+.chargesList td{
+	color: #404040; 
+	height: 34px;
+	line-height: 34px;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.chargesList .chargesType{
+	color: #404040;
+	width: 20%;
+	height: 69px;
+	line-height: 69px;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	margin-left: -1px;
+	text-indent: 50px;
+}
+.chargesList .pstn .chargesType,.chargesList .pstn table{
+	background: #b0caeb;
+}
+.chargesList .messages .chargesType,.chargesList .messages table{
+	background: #fce0c8;
+}
+.chargesList .chargesname{
+	width: 50%;
+	text-indent: 20px;
+}
+.chargesList .payType{
+	width: 25%;
+	text-align: center;
+}
+.chargesList .payPrice{
+	width: 25%;
+	text-indent: 30px;
+	border-right: none;
+}

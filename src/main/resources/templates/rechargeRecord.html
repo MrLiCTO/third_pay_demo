@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--/*/ <base th:href='${basePath}'/>/*/-->
+<head>
+	<meta charset="UTF-8">
+	<title>充值记录</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css" th:href="@{/css/base.css}"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/rechargeRecord.css" th:href="@{/css/rechargeRecord.css}"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/foundation-datepicker.css" th:href="@{/css/foundation-datepicker.css}"/>
+	<script type="text/javascript" src="../static/js/lib/jquery-1.7.2.js"  th:src="@{/js/lib/jquery-1.7.2.js}"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.page.js" th:src="@{/js/lib/jquery.page.js}"></script>
+	<script type="text/javascript" src="../static/js/lib/foundation-datepicker.js" th:src="@{/js/lib/foundation-datepicker.js}"></script>
+	<script type="text/javascript" src="../static/js/lib/vue.min.js" th:src="@{/js/lib/vue.min.js}"></script>
+	<script type="text/javascript">
+		var pathName=window.document.location.pathname;
+		var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+		if(projectName != "/frontend"){
+			projectName= "";
+		}
+	</script>
+</head>
+<body>
+	<div class="place">
+	    <span>位置：</span>
+	    <ul class="placeul">
+		    <li><a href="#">首页</a></li>
+		    <li><a href="#">财务管理</a></li>
+		    <li><a href="#">充值记录</a></li>
+	    </ul>
+    </div>
+	<div class="rechargeRecord con_width" id="rechargeRecord">
+		<div class="commonHd">
+			<span class="commonTitle">充值记录</span>
+		</div>
+		<div class="inquire clearfix">
+			<span class="fl">时间：</span>
+			<input type="text" class="dataBar" id="re_startTime" />
+			<span class="dataLine fl"></span>
+			<input type="text" class="dataBar" id="re_endTime" />
+			<input type="button" class="commonBtn inquireBtn fl" value="查询" @click="recordInquire" />
+		</div>
+		<div v-cloak>
+			<div>
+				<table class="recordTable" v-if="showData">
+					<thead>
+						<tr>
+						    <th class="orderNumber">订单号</th>
+						    <th>提交时间</th>
+						    <th class="payType">支付方式</th>
+						    <th class="payState">状态</th>
+						    <th class="payNum">充值金额（元）</th>
+						</tr>	
+					</thead>
+					<tbody>
+						<tr v-for="item in recordList" >
+						    <td class="orderNumber">{{item.unioncloudOrderId}}</td>
+						    <td>{{item.orderCreateTime}}</td>
+						    <td>{{item.paymentOrderId}}</td>
+						    <td class="payState">
+						    	<a v-bind:class="{unPaid: item.state=='未支付 >>'}" >{{item.state}}</a>
+						    </td>
+						    <td class="payNum">{{item.txnAmt}}</td>
+						</tr>
+					</tbody>			
+				</table>
+		        <div class="paginList"></div>	
+			</div>
+			<div class="no_data" v-if="noData">暂无充值记录</div>
+		</div>		
+	</div>	
+	<script  type="text/javascript" th:inline="javascript">
+		//获取充值记录接口
+		var rechargeRecord_url = "../static/json/rechargeRecord.json";
+		//未支付订单返回地址
+		var unPaid_url = 'confirmOrder.html';
+		/*[+
+		 //获取充值记录接口
+		 var rechargeRecord_url = "recharge/prepaidRecordslist";
+		 //未支付订单返回地址
+		 var unPaid_url = "recharge/confirmOrder";
+		 +]*/
+	</script>
+	<script type="text/javascript" src="../static/js/rechargeRecord.js" th:src="@{/js/rechargeRecord.js}"></script>
+</body>
+</html>

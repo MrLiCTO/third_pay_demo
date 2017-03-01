@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--/*/ <base th:href='${basePath}'/>/*/-->
+<head>
+	<meta charset="UTF-8">
+	<title>充值</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css" th:href="@{/css/base.css}"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/recharge.css" th:href="@{/css/recharge.css}"/>
+	<script type="text/javascript" src="../static/js/lib/jquery-1.7.2.js" th:src="@{/js/lib/jquery-1.7.2.js}"></script>
+	<script type="text/javascript">
+		var pathName=window.document.location.pathname;
+		var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+		if(projectName != "/frontend"){
+			projectName= "";
+		}
+	</script>
+</head>
+<body>
+	<div class="place">
+	    <span>位置：</span>
+	    <ul class="placeul">
+		    <li><a href="#">首页</a></li>
+		    <li><a href="#">财务管理</a></li>
+		    <li><a href="#">充值</a></li>
+	    </ul>
+    </div>
+	<div class="recharge con_width">
+		<div class="commonHd">
+			<span class="commonTitle">充值</span>	
+		</div>		
+		<div class="rechargeContent">
+			<div class="rechargeBalance clearfix">
+				<span class="itemName">当前余额：</span>
+				<div class="fl">
+					<p class="currerNumber">
+						<span class="num"></span>
+						<span>元</span>
+					</p>
+					<p class="info">*&nbsp请尽量保持账户余额足够使用，避免因余额不足造成业务中断</p>
+				</div>
+			</div>
+			<div class="rechargeAmount clearfix">
+				<span class="itemName">充值金额：</span>
+				<div class="fl">
+					<input type="text" class="rechargeNum fl" id="rechargeNum" />
+					<span class="yuan fl" >元</span>
+					<p class="errorInfo fl">请输入正确的金额</p>
+				</div>
+			</div>
+			<div class="rechargeType clearfix">
+				<span class="itemName">支付方式：</span>
+				<a href="javascript:;" title="支付宝" class="alipay">
+					<img src="../static/images/alipay.png"  th:src="@{/images/alipay.png}"/>
+					<i></i>
+				</a>
+				<a href="javascript:;" title="微信" class="wechat">
+					<img src="../static/images/wechat.png"  th:src="@{/images/wechat.png}"/>
+					<i></i>
+				</a>
+				<a href="javascript:;" title="银联" class="unionpay">
+					<img src="../static/images/unionpay.png" th:src="@{/images/unionpay.png}"/>
+					<i></i>
+				</a>
+			</div>
+			<div>
+				<input type="button" class="commonBtn rechargeBtn" value="立即充值" />
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript"  th:inline="javascript">
+		//获取当前余额
+		var currerNumber_url = "../static/json/currerNumber.json";
+		//提交订单数据接口
+		var recharge_url = "../static/json/recharge.json";
+		//提交成功跳转地址
+		var submit_url = "confirmOrder.html";
+		/*[+
+		 //获取当前余额
+		 var currerNumber_url = "recharge/get_balance";
+		 //提交订单数据接口
+		 var recharge_url = "recharge/productOrder";
+		 //提交成功跳转地址
+		 var submit_url = "recharge/confirmOrder";
+		 +]*/
+	</script>
+	<script type="text/javascript" src="../static/js/recharge.js" th:src="@{/js/recharge.js}"></script>
+</body>
+</html>

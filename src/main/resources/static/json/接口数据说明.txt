@@ -1,0 +1,206 @@
+﻿资费配置
+
+url: http://localhost:8088/balance/charges
+参数:accountId
+response:
+
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "pstn": [
+      {
+        "name": "(国内)(运营商)单向外呼",
+        "payType": "时长",
+        "price": "0.12",
+        "unit": "元/分钟"
+      },
+      {
+        "name": "(国内)(运营商)单向外呼（隐号）",
+        "payType": "时长",
+        "price": "0.12",
+        "unit": "元/分钟"
+      },
+      {
+        "name": "(国内)(运营商)双向外呼",
+        "payType": "时长",
+        "price": "0.12",
+        "unit": "元/分钟"
+      },
+      {
+        "name": "(国内)(运营商)双向外呼（隐号）",
+        "payType": "时长",
+        "price": "0.12",
+        "unit": "元/分钟"
+      }
+    ],
+    "voip": [
+      {
+        "name": "互联网语音（IP呼入，PSTN呼出）",
+        "payType": "时长",
+        "price": "0",
+        "unit": "元/分钟"
+      }
+    ],
+    "messages": [
+      {
+        "name": "（国内）短信（下行）",
+        "payType": "数量",
+        "price": "0.12",
+        "unit": "元/条"
+      },
+      {
+        "name": "（标准）语音验证码（显号）",
+        "payType": "数量",
+        "price": "0.12",
+        "unit": "元/条"
+      },
+      {
+        "name": "（标准）语音验证码（隐号）",
+        "payType": "数量",
+        "price": "0.12",
+        "unit": "元/条"
+      }
+    ]
+  }
+}
+
+
+账户总览
+
+1.获取账户余额及本日消费&本月消费
+url:/balance/getAccountAmount/{accountId}
+参数: accountId 开发者ID
+Response Body
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "primaryAmount": 23322,
+    "deputeAmount": 100322,
+    "consumptionYesterday": 700032,
+    "consumptionMonth": 6999923
+  }
+}
+
+2.获取消费概览
+url:/balance/getConsumerOverview/{accountId}
+参数: accountId 开发者ID
+Response Body
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "单项外呼": 200,
+    "互联网语音": 200,
+    "语音验证": 200,
+    "短信": 200,
+    "双项外呼": 200
+  }
+}
+
+月结账单
+
+1.获取账户消费信息
+url:/balance/getAccountInfo/{accountId}
+参数: {accountId} 开发者ID
+Response Body
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": [
+    {
+      "name": "primary",
+      "amount": 10000,
+      "deduction": 2000,
+      "balance": 8000,
+      "rechargeAmount": 6000
+    },
+    {
+      "name": "depute",
+      "amount": 10000,
+      "deduction": 2000,
+      "balance": 8000,
+      "rechargeAmount": 6000
+    }
+  ]
+}
+
+
+2.获取每个条目下的消费信息
+url:/balance/getConsumerInfo/{accountId}/{month}
+参数:{accountId} 开发者ID
+	{month} 查询月份
+Response Body
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": [
+    {
+      "name": "PSTN语音",
+      "total": 2100,
+      "items": [
+        {
+          "name": "(国内)(运营商)单向外呼",
+          "payType": "时长",
+          "price": 2100,
+          "number": 36
+        },
+        {
+          "name": "(国内)(运营商)单向外呼（隐号）",
+          "payType": "时长",
+          "price": 2100,
+          "number": 35
+        },
+        {
+          "name": "(国内)(运营商)双向外呼",
+          "payType": "时长",
+          "price": 2100,
+          "number": 35
+        },
+        {
+          "name": "(国内)(运营商)双向外呼（隐号）",
+          "payType": "时长",
+          "price": 2100,
+          "number": 35
+        }
+      ]
+    },
+    {
+      "name": "VOIP服务",
+      "total": 2100,
+      "items": [
+        {
+          "name": "互联网语音（IP呼入，PSTN呼出）",
+          "payType": "时长",
+          "price": 2100,
+          "number": 35
+        }
+      ]
+    },
+    {
+      "name": "短信、语音验证",
+      "total": 2100,
+      "items": [
+        {
+          "name": "（国内）短信（下行）",
+          "payType": "条数",
+          "price": 2100,
+          "number": 35
+        },
+        {
+          "name": "（标准）语音验证码（显号）",
+          "payType": "条数",
+          "price": 2100,
+          "number": 35
+        },
+        {
+          "name": "（标准）语音验证码（隐号）",
+          "payType": "条数",
+          "price": 2100,
+          "number": 35
+        }
+      ]
+    }
+  ]
+}

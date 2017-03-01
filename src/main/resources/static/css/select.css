@@ -1,0 +1,41 @@
+/*下拉选择*/
+.uew-select{
+	width: 142px;
+	position:relative;
+}
+.uew-select .uew-select-value{
+	height: 28px;
+	line-height: 28px;
+	z-index:1;
+	position:relative;
+	padding-left:12px;
+	background:#fff;
+	font-size:12px; 
+	text-indent:5px;
+	border-color: #a7b5bc #ced9df #ced9df #a7b5bc;
+    border-style: solid;
+    border-width: 1px;
+}
+.uew-select-value em{
+	font-style:normal;
+}
+.uew-select .uew-icon{
+	width: 16px; 
+	height: 16px;
+	position:absolute;
+	right:5px;
+	top:6px;
+	background-image:url(../images/uew_icon.png);
+}
+.uew-select select{
+	font-size: 12px;
+	z-index:2;
+	position:absolute;
+	top:2px;
+	left: 0;
+	cursor:pointer; 
+	height:28px;
+	opacity:0;
+	filter:alpha(opacity=0);
+	background: none;
+}

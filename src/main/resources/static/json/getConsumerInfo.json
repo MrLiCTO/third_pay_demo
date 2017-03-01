@@ -1,0 +1,30 @@
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": [
+    {
+      "name": "PSTN语音",
+      "total": 12,
+      "items": [
+        {
+          "name": 2, 
+          "payType": 1, 
+          "price": 12,
+          "number": 12
+        }
+      ]
+    },
+    {
+      "name": "短信、语音验证",
+      "total": 63,
+      "items": [
+        {
+          "name": 4,
+          "payType": 2,
+          "price": 63,
+          "number": 63
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "code": 0,
+  "data": {
+    "accountId": "开发者Id",
+    "paymentOrderId": "支付类型",
+    "txnAmt": 金额,
+    "unioncloudOrderId": "订单编号"
+	
+  },
+  "msg": "string"
+}
+
+
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "pageData": [
+      {
+    "orderCreateTime": "提交时间",
+    "paymentOrderId": "支付方式",
+    "state": 状态（充值状态：0:支付失败, 1:支付成功, 2:未支付,3:过期）,
+    "txnAmt": 金额,
+    "unioncloudOrderId": "订单编号"
+      }
+    ],
+    "totalCount": 100
+  }
+}

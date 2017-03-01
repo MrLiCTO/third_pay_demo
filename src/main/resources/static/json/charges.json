@@ -1,0 +1,34 @@
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "pstn": [
+      {
+        "name": "1",  
+        "payType": "1", 
+        "price": "0.12",
+        "unit": "元/分钟"
+      },
+      {
+        "name": "2",
+        "payType": "1",
+        "price": "0.12",
+        "unit": "元/分钟"
+      }
+    ],
+    "messages": [
+      {
+        "name": "3",
+        "payType": "2",
+        "price": "0.1",
+        "unit": "元/条"
+      },
+      {
+        "name": "4",
+        "payType": "2",
+        "price": "0.21",
+        "unit": "元/条"
+      }
+    ]
+  }
+}

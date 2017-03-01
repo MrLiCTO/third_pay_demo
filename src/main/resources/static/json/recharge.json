@@ -1,0 +1,10 @@
+﻿{
+  	"code": 200,
+  	"data": {
+    	"accountId": "开发者Id",
+    	"paymentOrderId": "支付类型",
+    	"txnAmt": "100",
+    	"unioncloudOrderId": "1234567890"
+ 	},
+  	"msg": "string"
+}

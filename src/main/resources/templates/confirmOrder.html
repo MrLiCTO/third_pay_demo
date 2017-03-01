@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--/*/ <base th:href='${basePath}'/>/*/-->
+<head>
+	<meta charset="UTF-8">
+	<title>确认订单</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css" th:href="@{/css/base.css}" />
+	<link rel="stylesheet" type="text/css" href="../static/css/confirmOrder.css" th:href="@{/css/confirmOrder.css}"/>
+	<script type="text/javascript" src="../static/js/lib/jquery-1.7.2.js" th:src="@{/js/lib/jquery-1.7.2.js}"></script>
+	<script type="text/javascript" src="../static/js/lib/vue.min.js" th:src="@{/js/lib/vue.min.js}"></script>
+	<script type="text/javascript">
+		var pathName=window.document.location.pathname;
+		var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+		if(projectName != "/frontend"){
+			projectName= "";
+		}
+	</script>
+</head>
+<body>	
+	<div class="place">
+	    <span>位置：</span>
+	    <ul class="placeul">
+		    <li><a href="#">首页</a></li>
+		    <li><a href="#">财务管理</a></li>
+		    <li><a href="#">确认订单</a></li>
+	    </ul>
+    </div>
+	<div class="confirm con_width" id="confirmOrder">
+		<div class="popupMasker"></div>
+		<div class="payResult">
+			<div class="payResHeader">
+				<span class="weChatTitle">收银台 · 微信支付</span>
+				<a href="javascript:;" id="confirmCloseBtn" @click="closeMasker"></a>	
+			</div>
+			<div class="payResTip">
+				<p>支付完成前，请不要关闭此窗口</p>
+				<p>支付完成后，请根据您的实际情况点击下面按钮</p>			
+			</div>
+			<div class="weChatPay">
+				
+				<p class="payNumber">
+					<span>{{orderInfo.txnAmt}}</span>
+					<span>元</span>
+				</p>
+				<img src="" height="28" width="28" alt="图片加载失败" class="weChatCode">
+				<div class="weChatTip clearfix">
+					<i class="fl"></i>
+					<span class="fl">微信扫一扫，进行付款</span>
+				</div>
+			</div>
+			<div class="payBtn clearfix">
+				<a href="javascript:;" class="payErrorBtn">支付遇到问题</a>
+				<a href="javascript:;" class="paySuccBtn">支付完成</a>
+			</div>
+		</div> 
+		<div class="commonHd">
+			<span class="commonTitle">确认订单</span>
+		</div>
+		<form action="" method="post" target="_blank" class="submit">
+			<table class="confirmTable">
+				<thead>
+					<tr>
+					    <th class="orderNumber">订单编号</th>
+					    <th>充值账户</th>
+					    <th>充值金额</th>
+					    <th>支付方式</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-cloak>
+					    <td class="orderNumber">{{unioncloudOrderId}}</td>
+					    <td class="chargeUser">{{orderInfo.accountId}}</td>
+					    <td class="chargeNum">{{orderInfo.txnAmt}}&nbsp元</td>
+					    <td class="payType">{{orderInfo.paymentOrderId}}</td>
+					</tr>
+				</tbody>
+				
+			</table>	
+		</form>		
+		<p class="tipInfo">*&nbsp请在24小时内完成付款，超时请重新下单</p>
+		<div class="confirmInfo" v-cloak>
+			<a href="javascript:;" class="confirmHref"><input type="button" value="确认付款" class="commonBtn confirmBtn" @click="confOrder"></a>	
+			<p class="promptInfo" v-if="orderContinue"><span><i></i>订单保留24小时</span></p>
+			<p class="promptInfo error" v-if="orderCancel"><span><i></i>链接失效，请重新下单</span></p>
+		</div>	
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		// 获取订单信息接口
+		var confirmOrder_url = "../static/json/confirmOrder.json";
+		//支付宝充值接口
+		var alipay_url = "rechargeRecord.html";
+		//微信充值接口
+		var wechat_url = "rechargeRecord.html";
+		//银联支付接口
+		var unionpay_url = "rechargeRecord.html";
+		//订单失效返回地址
+		var backRecharge_url = "recharge.html";
+		//订单提交成功返回地址
+		var backRechargeRecord_url = "rechargeRecord.html";
+		/*[+
+		 // 获取订单信息接口
+		 var confirmOrder_url = "recharge/prepaidRecords";
+		 //支付宝充值接口
+		 var alipay_url = "ali/pay";
+		 //微信充值接口
+		 var wechat_url = "wexin/pay";
+		 //银联支付接口
+		 var unionpay_url = "../static/json/confirmOrder.json";
+		 //订单失效返回地址
+		 var backRecharge_url = "recharge/recharge";
+		 //订单提交成功返回地址
+		 var backRechargeRecord_url = "recharge/rechargeRecord";
+		 +]*/
+	</script>
+	<script type="text/javascript" src="../static/js/confirmOrder.js" th:src="@{/js/confirmOrder.js}"></script>
+</body>
+</html>

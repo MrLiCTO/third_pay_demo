@@ -1,0 +1,97 @@
+/*清楚默认样式*/
+body,div,dl,dt,h1,h2,h3,h4,h5,h6,li,ol,p,ul,table,th,td,input{ 
+	margin: 0;  
+	padding: 0;
+}
+li{ 
+	list-style: none;
+}
+img{ 
+	border: none; 
+	vertical-align: top;
+}
+input,select{ 
+	border:none;
+	outline:none;
+	background: none;
+}
+input:focus{
+	outline: -webkit-focus-ring-color auto 5px;
+}
+a{ 
+	text-decoration: none;
+	color: #000;
+}
+table{
+	border-collapse:collapse;
+	border-spacing: 0;
+}
+/*重用样式*/
+.fl{ 
+	float: left;
+}
+.fr{ 
+	float: right;
+}
+.clearfix:after{ 
+	content: ''; 
+	display:block; 
+	clear:both;
+}
+body{
+	min-width: 980px; 
+	font-family: "microsoft YaHei",helvetica,arial,sans-serif; 
+	font-size: 14px;
+}
+.con_width{ 	
+	padding: 10px 18px;
+}
+.commonHd{ 
+	height: 35px; 
+	line-height: 35px;
+	border-bottom: 1px solid #d0dee5;  
+	margin-bottom: 30px;
+	position: relative;
+}
+.commonHd .commonTitle{
+	height: 30px; 
+	line-height: 30px;
+	font-weight: bold;
+	border-bottom: 3px solid #66c9f3;
+	position: absolute;
+	bottom: -1px;
+	padding: 0 3px;
+}
+.commonBtn{
+	width: 137px;
+	height: 35px; 
+	text-align: center; 
+	background:url(../images/btn_bg.png) no-repeat;
+	font-weight: bold;
+	color: #fff; 
+	cursor: pointer;
+}
+.place {
+    height: 40px;
+    background: url(../images/righttop.gif) repeat-x;
+}
+.place span {
+    line-height: 40px;
+    font-weight: bold;
+    float: left;
+    margin-left: 12px;
+}
+.placeul li {
+    float: left;
+    line-height: 40px;
+    padding-left: 7px;
+    padding-right: 12px;
+    background: url(../images/rlist.gif) no-repeat right;
+}
+.placeul li:last-child {
+    background: none;
+}
+.placeul li a:hover {
+    color: #00a4ac;
+    text-decoration: none;
+}

@@ -1,0 +1,9 @@
+﻿{
+  	"code": 200,
+  	"data": {
+    	"primaryAccount": "主账户余额",
+    	"deputeAccount": "副账户余额",
+    	"totalAccount": "总账户余额"
+ 	},
+  	"msg": "string"
+}

@@ -1,0 +1,123 @@
+/*充值记录*/
+[v-cloak] {
+  display: none;
+}
+.rechargeRecord .inquire{ 
+	line-height: 30px; 
+	color: #404040;
+}
+/*时间选择*/
+.rechargeRecord .dataLine{ 
+	width: 10px; 
+	height: 0; 
+	border-top: 1px solid #d9d9d9; 
+	margin-top: 14px;
+}
+.rechargeRecord .dataBar{ 
+	width: 100px; 
+	height:28px; 
+	border: 1px solid #d9d9d9; 
+	border-radius: 1px; 
+	float: left;   
+	margin: 0 5px; 
+	padding-left: 24px; 
+	color: #404040; 
+	line-height: 28px;
+}
+.rechargeRecord .inquireBtn{ 
+	width: 80px; 
+	height: 30px; 
+	margin-left: 16px;
+}
+/*table*/
+.recordTable{ 
+	width: 100%; 
+	border: 1px solid #d9d9d9;  
+	text-align: left; 
+	margin-top: 26px;
+}
+.recordTable th{ 
+	text-indent: 12px;
+	color: #333; 
+	background:url(../images/th.gif) repeat-x; 
+	height: 34px; 
+	border-bottom: 1px solid #b6cad2;
+}
+.recordTable td{ 
+	text-indent: 12px;
+	color: #404040; 
+	height: 34px;
+	border-right: 1px dotted #c7c7c7;
+}
+.recordTable tr:nth-child(even){
+	background: #f5f8fa;
+}
+.recordTable tbody tr:hover{
+	background: #e5ebee;
+}
+.recordTable .orderNumber{ 
+	width: 25%; 
+	padding-left: 20px;
+}
+.recordTable .payType,.recordTable .payState,.recordTable .payNum{ 
+	width: 14%;
+}
+.recordTable .unPaid{ 
+	color: #ff931e;
+}
+.rechargeRecord .no_data{
+	height: 68px;
+	line-height: 68px;
+	font-size: 12px;
+	margin-top: 26px;
+	text-align: center;
+	color: #1a1a1a;
+	border:1px solid #d9d9d9;
+}
+/*page*/
+.paginList{
+	padding: 15px 20px;
+	text-align: left;
+	color: #ccc;
+	float: right;
+}
+.paginList a{
+	display: inline-block;
+	color: #428bca;
+	display: inline-block;
+	height: 25px;	
+	line-height: 25px;	
+	padding: 0 10px;
+	border: 1px solid #ddd;	
+	margin: 0 2px;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+.paginList a:hover{
+	text-decoration: none;
+	border: 1px solid #428bca;
+}
+.paginList span.current{
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	margin: 0 2px;
+	color: #fff;
+	background-color: #428bca;	
+	border: 1px solid #428bca;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+.paginList span.disabled{	
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	margin: 0 2px;	
+	color: #bfbfbf;
+	background: #f2f2f2;
+	border: 1px solid #bfbfbf;
+	border-radius: 4px;
+	vertical-align: middle;
+}

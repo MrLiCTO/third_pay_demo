@@ -1,0 +1,157 @@
+/*确认订单*/
+/*table*/
+[v-cloak] {
+  display: none;
+}
+.confirmTable{ 
+	min-width: 980px; 
+	border: 1px solid #d9d9d9; 
+	text-align: left; 
+}
+.confirmTable th{ 
+	text-indent: 12px;
+	color: #333; 
+	background:url(../images/th.gif) repeat-x; 
+	height: 34px; 
+	border-bottom: 1px solid #b6cad2;
+}
+.confirmTable td{ 
+	text-indent: 12px;
+	color: #404040; 
+	height: 34px;
+	border-right: 1px dotted #c7c7c7;
+}
+.confirmTable .orderNumber{ 
+	padding-left: 30px;
+}
+.confirmInfo{ 
+	text-align: center;
+}
+.confirmBtn{ 
+	margin:30px auto 20px;
+}
+/*提示信息*/
+.confirm .tipInfo{
+	font-family: "黑体"; 
+	font-size: 12px;
+	height: 32px;
+	line-height: 32px; 
+	color: #999; 
+	padding-left: 16px;
+}
+.confirm .promptInfo{ 
+	font-size: 14px; 
+	font-family: "黑体"; 
+	line-height: 20px; 
+	color: #ff931e; 
+	padding-left: 30px; 
+	display: block; 
+	text-align: center;
+}
+.confirm .promptInfo span{ 
+	position: relative; 
+}
+.confirm .promptInfo i{ 
+	width: 21px; 
+	height: 20px; 
+	position: absolute; 
+	left: -29px; 
+	background: url(../images/rechargesprite.png) no-repeat 0 -55px;
+}
+.confirm .error i{
+	background: url(../images/rechargesprite.png) no-repeat 0 -30px;
+}
+/*弹窗*/
+.popupMasker{ 
+	position: absolute; 
+	left: 0px; 
+	top: 0px; 
+	right: 0;
+	bottom: 0;
+	z-index: 9998; 
+	background: rgb(0, 0, 0); 
+	opacity: 0.6;
+	display: none;
+}
+.payResult{ 
+	width: 440px;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	margin-left: -220px;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 9999;
+	display: none;
+}
+.payResHeader{
+	height: 40px;
+	background: #f0f0f0;
+	line-height: 40px;
+	padding-left: 20px;
+}
+.weChatTitle{
+	display: none;
+}
+.payResTip{
+	line-height: 30px;
+	padding-left: 74px;
+	margin-top: 50px;
+	margin-bottom: 52px;
+	display: none;
+}
+.weChatPay{
+	display: none;
+}
+.weChatCode{
+	width: 170px; 
+	height: 170px;
+	display: block;
+	margin: 0 auto;
+}
+.payNumber{
+	 line-height: 82px;
+	 font-size: 26px;
+	 color: #fb8d1e;
+	 text-align: center;
+}
+.weChatTip{
+	margin: 14px 10px 40px 134px;
+}
+.weChatTip i{
+	width: 28px;
+	height: 28px;
+	background: url(../images/weChatIcon.png);
+	margin-right: 10px; 
+}
+.weChatTip span{
+	line-height: 28px;
+}
+.payBtn a{
+	display: block;
+	float: left;
+	height: 34px;
+	line-height: 34px;
+	padding: 0 15px;
+	border-radius: 2px;
+	margin-bottom: 30px;
+}
+.payBtn .paySuccBtn{
+	background: url(../images/btnbg1.png) repeat-x;
+	color: #fff;
+}
+.payBtn .payErrorBtn{
+	background: url(../images/btnbg2.png) repeat-x;
+	color: #404040;
+	margin-right: 20px;
+	margin-left: 100px;
+}
+#confirmCloseBtn{  
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	right: 20px;
+	top: 12px;
+	background: url(../images/close.png);
+}

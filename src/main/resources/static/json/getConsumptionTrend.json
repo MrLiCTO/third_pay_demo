@@ -1,0 +1,22 @@
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": [
+    {
+      "amount": 3652,
+      "days": 1
+    },
+    {
+      "amount": 4152,
+      "days": 2
+    },
+    {
+      "amount": 100,
+      "days": 3
+    },
+    {
+      "amount": 2563,
+      "days": 4
+    }
+  ]
+}

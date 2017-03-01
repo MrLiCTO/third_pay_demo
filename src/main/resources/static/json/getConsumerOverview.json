@@ -1,0 +1,22 @@
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": [
+    {
+      "result": 25663,
+      "proType": 1
+    },
+    {
+      "result": 500,
+      "proType": 2
+    },
+    {
+      "result": 3652,
+      "proType": 3
+    },
+    {
+      "result": 3652,
+      "proType": 4
+    }
+  ]
+}

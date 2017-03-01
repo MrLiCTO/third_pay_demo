@@ -1,0 +1,192 @@
+/*消费详单*/
+[v-cloak] {
+  display: none;
+}
+.consumptionDetailContent .itemList>div{
+	height: 46px;
+}
+.consumptionDetailContent .itemName{ 
+	width:65px;	
+	height: 30px;
+	color: #404040;  
+	line-height: 30px; 
+	float: left;
+}
+.consumeTime .dateBar{ 
+	width: 116px; 
+	height:28px; 
+    border-color: #a7b5bc #ced9df #ced9df #a7b5bc;
+    border-style: solid;
+    border-width: 1px;
+    background: url(../images/inputbg.gif) repeat-x;
+	float: left; 
+	padding-left: 24px; 
+	color: #404040; 
+	line-height: 28px;
+}
+.consumeTime .dateLine{ 
+	width: 10px; 
+	height: 0; 
+	border-top: 1px solid #d9d9d9; 
+	margin:14px 5px;
+}
+.consumptionDetail .keyWordTxt{ 
+	width: 130px; 
+	height: 28px; 
+	line-height: 28px;
+    border-color: #a7b5bc #ced9df #ced9df #a7b5bc;
+    border-style: solid;
+    border-width: 1px;
+    background: url(../images/inputbg.gif) repeat-x;
+	padding-left: 10px;  
+}
+.consumptionDetail .keyWordBtn{ 
+	width: 80px; 
+	height:30px;
+	margin-left: 20px;
+}
+/*table*/
+.consumeListTable{ 
+	border: 1px solid #d9d9d9;  
+	text-align: left; 
+	margin-top: 10px;
+	display: none;
+}
+.showTableList{
+	display: block;
+}
+.consumeListTable th{ 
+	text-indent: 12px;
+	color: #333; 
+	background:url(../images/th.gif) repeat-x; 
+	height: 34px; 
+	border-bottom: 1px solid #b6cad2;
+}
+.consumeListTable td{ 
+	font-size: 12px;
+	text-indent: 12px;
+	color: #404040; 
+	height: 34px;
+	border-right: 1px dotted #c7c7c7;
+}
+.consumeListTable tr:nth-child(even){
+	background: #f5f8fa;
+}
+.consumeListTable tr.odd{
+	background: #f5f8fa;
+}
+.consumeListTable tbody tr:hover{
+	background: #e5ebee;
+}
+/*.consumeListTable .serviceType{
+	width: 176px;
+}*/
+.consumeListTable .costNumber{
+	border-right:none;
+}
+/*.twoWayCall .called{
+	width: 278px;
+}
+.messages .receiveNumber,.messages .messageCont{
+	width: 210px;
+}
+.voiceCode .receiveNumber,.voiceCode .startTime{
+	width: 278px;
+}*/
+/*消费类型*/
+.consumeItems{ 
+	width: 1004px;
+	border-bottom: 1px solid #3d96c9; 
+	border-right: 1px solid #d9d9d9; 
+	margin-top:20px; 
+	overflow:auto; zoom:1;
+}
+.consumeItems li{ 
+	width: 250px; 
+	height: 38px; 
+	color: #404040;
+	float: left; 
+	line-height: 38px; 
+	text-align: center; 
+	border-top: 1px solid #d9d9d9; 
+	border-left: 1px solid #d9d9d9;
+	cursor: pointer;
+}
+.consumeItems li:hover{ 
+	background: #3d96c9; 
+	color: #fff;
+}
+.consumeItems .liChecked{
+	background: #3d96c9; 
+	color: #fff;
+}
+.consumeList .no_data{
+	height: 68px;
+	line-height: 68px;
+	font-size: 12px;
+	margin-top: 26px;
+	text-align: center;
+	color: #1a1a1a;
+	border:1px solid #d9d9d9;
+}
+/*page*/
+.pagin{
+	position:relative;
+	margin-top:10px;
+	padding:0 12px;
+	display: none;
+}
+.pageInfo{
+	line-height: 57px;
+	float: left;
+}
+.pagin .blue{
+	color:#056dae;
+	font-style:normal;
+}
+.paginList{
+	padding: 15px 20px;
+	text-align: left;
+	color: #ccc;
+	float: right;
+}
+.paginList a{
+	display: inline-block;
+	color: #428bca;
+	display: inline-block;
+	height: 25px;	
+	line-height: 25px;	
+	padding: 0 10px;
+	border: 1px solid #ddd;	
+	margin: 0 2px;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+.paginList a:hover{
+	text-decoration: none;
+	border: 1px solid #428bca;
+}
+.paginList span.current{
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	margin: 0 2px;
+	color: #fff;
+	background-color: #428bca;	
+	border: 1px solid #428bca;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+.paginList span.disabled{	
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	margin: 0 2px;	
+	color: #bfbfbf;
+	background: #f2f2f2;
+	border: 1px solid #bfbfbf;
+	border-radius: 4px;
+	vertical-align: middle;
+}

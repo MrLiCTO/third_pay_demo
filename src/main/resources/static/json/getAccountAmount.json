@@ -1,0 +1,10 @@
+{
+  "code": 200,
+  "msg": "调用成功",
+  "data": {
+    "primaryAmount": 23322,
+    "deputeAmount": 10032,
+    "consumptionYesterday": 7032,
+    "consumptionMonth": 6923
+  }
+}

@@ -1,0 +1,12 @@
+﻿{
+  	"code": 200,
+  	"data": {
+  	  	"state":"2",
+    	"accountId": "用户",
+	    "paymentOrderId": "1",
+	    "txnAmt": "充值金额",
+	    "unioncloudOrderId": "订单号"
+ 	},
+  	"msg": "string"
+	
+}
